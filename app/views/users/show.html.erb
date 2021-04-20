@@ -1,2 +1,27 @@
-<h1>マイページ</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<main>
+        <p id="notice"></p>
+        <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+    <h2>User info</h2>
+    <form enctype="multipart/form-data" action="/users/35717" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="OqTu/VG7p5coMVzHdGkkquAmcSQEe82y5uk1QRO1dCCsOmiKrQh1oRLh+bD0ZJtug2W5XTwzQ1WFdnHhsc6mIQ==">
+
+      <div class="form-group">
+        <label for="user_name">Name</label>
+        <input class="form-control name" type="text" value="wasabi " name="user[name]" id="user_name">
+      </div>
+     <div class="form-group">
+        <label for="user_image">Image</label>
+        <input value="{}" data-reference="5ba2497d6887de19b0aa0e14746267b4" type="hidden" name="user[profile_image]"><input class="form-control-file user_image" data-reference="5ba2497d6887de19b0aa0e14746267b4" include_hidden="false" type="file" name="user[profile_image]" id="user_profile_image">
+      </div>
+      <div class="form-group">
+        <label for="user_introduction">Introduction</label>
+        <textarea class="form-control introduction" name="user[introduction]" id="user_introduction"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">
+      </div>
+</form>  </div>
+</div>
+
+      </div></main>
