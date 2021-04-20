@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   def new
-    @book = Book.new
   end
 
   def create
@@ -13,6 +12,7 @@ class BooksController < ApplicationController
   end
 
   def index
+    @book = Book.new
     @books = Book.all
   end
 
@@ -21,6 +21,7 @@ class BooksController < ApplicationController
 
   def destroy
   end
+  
     private
   # ストロングパラメータ
   def book_params
