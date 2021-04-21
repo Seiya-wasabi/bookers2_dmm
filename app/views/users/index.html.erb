@@ -1,0 +1,190 @@
+<main>
+        <p id="notice"></p>
+        <div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
+      <h2>User info</h2>
+        <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg"><table class="table">
+  <tbody><tr></tr>
+  <tr>
+	  <th>name</th>
+	  <th>wasabi </th>
+  </tr>
+  <tr>
+	  <th>introduction</th>
+	  <th></th>
+  </tr>
+</tbody></table>
+　
+<div class="row">
+  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_35953" href="/users/35953/edit"></a>
+</div>
+      <h2 class="mt-3">New book</h2>
+      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="7IKdHzzsON/zCLMAG7ujyxJlpxwB5aru29NraRodbIakl3fxxiN/gRayB71Mt/FNtQbwm+o2NnlE1boTV7DD5w==">
+  <div class="form-group">
+    <label for="book_title">Title</label>
+    <input class="form-control book_title" type="text" name="book[title]" id="book_title">
+  </div>
+  <div class="form-group">
+    <label for="book_opinion">Opinion</label>
+    <textarea class="form-control book_body" name="book[body]" id="book_body"></textarea>
+  </div>
+  <div class="form-group">
+    <input type="submit" name="commit" value="Create Book" class="btn btn-success" data-disable-with="Create Book">
+  </div>
+</form>
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <h2>Users</h2>
+      <table class="table">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>test</td>
+        <td><a class="user_35961" href="/users/35961">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>ishii</td>
+        <td><a class="user_35956" href="/users/35956">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>Tatsuya</td>
+        <td><a class="user_35962" href="/users/35962">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>kobayashi</td>
+        <td><a class="user_35963" href="/users/35963">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>aacccccb</td>
+        <td><a class="user_35964" href="/users/35964">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>Olivia</td>
+        <td><a class="user_35938" href="/users/35938">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>James</td>
+        <td><a class="user_35939" href="/users/35939">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>Lucas</td>
+        <td><a class="user_35940" href="/users/35940">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>chikara</td>
+        <td><a class="user_35942" href="/users/35942">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>tetsuya</td>
+        <td><a class="user_35943" href="/users/35943">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>aaaaa</td>
+        <td><a class="user_35944" href="/users/35944">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>aa</td>
+        <td><a class="user_35945" href="/users/35945">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>aaa</td>
+        <td><a class="user_35941" href="/users/35941">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>qq</td>
+        <td><a class="user_35946" href="/users/35946">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>テスト花子</td>
+        <td><a class="user_35947" href="/users/35947">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>kkk</td>
+        <td><a class="user_35948" href="/users/35948">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>bbbbbb</td>
+        <td><a class="user_35949" href="/users/35949">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>aaavvv</td>
+        <td><a class="user_35950" href="/users/35950">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image" src="/attachments/71cc1175db05ffb108a68d59f739596c1ab64cf5/store/fill/50/50/c83df04df850bc3d0e72930587b521a330e2297a0dfdb6cc33f980ac5bbc/profile_image"></td>
+        <td>Yukihiro</td>
+        <td><a class="user_35951" href="/users/35951">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>rk</td>
+        <td><a class="user_35952" href="/users/35952">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>wasabi </td>
+        <td><a class="user_35953" href="/users/35953">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>吉田拓未</td>
+        <td><a class="user_35954" href="/users/35954">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>nanaura</td>
+        <td><a class="user_35955" href="/users/35955">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>kiki</td>
+        <td><a class="user_35957" href="/users/35957">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>tarako</td>
+        <td><a class="user_35958" href="/users/35958">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>ayaka</td>
+        <td><a class="user_35960" href="/users/35960">Show</a></td>
+      </tr>
+      <tr>
+        <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg"></td>
+        <td>lllllll</td>
+        <td><a class="user_35959" href="/users/35959">Show</a></td>
+      </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</div>
+      </main>
