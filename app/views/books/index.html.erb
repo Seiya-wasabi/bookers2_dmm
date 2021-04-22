@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+     <!--ここにプロフの画像を乗っけたい-->
       <!--<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">-->
       <table class="table">
 <table>
@@ -27,7 +27,7 @@
 </table>
 
 <div class="row">
-  <%= link_to 'fas fa-user-cog', edit_user_path(@user.id), class: "btn btn-outline-secondary" %>
+  <%= link_to 'fas fa-user-cog', edit_user_path, class: "btn btn-outline-secondary" %>
 <!--  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_35095" href= "users/#{@book.user_id}/edit" ></a>-->
 <!--</div>-->
 
