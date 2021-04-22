@@ -10,6 +10,9 @@
     <div class="col-md-3">
       <h2>User info</h2>
      <!--ここにプロフの画像を乗っけたい-->
+     <!--完成させようの2-5 かなり下らへんにあり-->
+     <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
+     <!--<img class="attachment user profile_image fallback" src="/bookers2/app/assets/images/no_image.jpg">-->
       <!--<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">-->
       <table class="table">
 <table>
@@ -27,9 +30,9 @@
 </table>
 
 <div class="row">
-  <%= link_to 'fas fa-user-cog', edit_user_path, class: "btn btn-outline-secondary" %>
-<!--  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_35095" href= "users/#{@book.user_id}/edit" ></a>-->
-<!--</div>-->
+
+  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_35095" href= "users/#{@book.user_id}/edit" ></a>
+</div>
 
 <!--      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="lwqQwXcQfdaT0Gq5XMto+R6XLorraUZxnfYaBdOgJx7fH3ovjd86iHZq3gQLxzp/ufR5DQC62uYC8Mt/ng2Ifw==">-->
 <!--  <div class="form-group">-->
@@ -73,7 +76,10 @@
   <tbody>
     <% @books.each do|b| %>
       <tr>
-        <td><%= b.title %></td>
+        <td><a href="/users/#{b.id}">
+          <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
+            </a></td>
+        <td><%= link_to "b.title", book_path(b.id) %></td>
         <td><%= b.opinion %></td>
       </tr>
     <% end %>
