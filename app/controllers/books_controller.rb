@@ -15,7 +15,7 @@ class BooksController < ApplicationController
   def index
     @book = Book.new
     @books = Book.all
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def show
@@ -40,7 +40,7 @@ class BooksController < ApplicationController
   end
 
     private
-  # ストロングパラメータ
+  
   def book_params
     params.require(:book).permit(:title, :opinion)
   end
