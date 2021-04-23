@@ -45,7 +45,8 @@
           <td><a href="/books/#{@book}"><%= @book.title %></a></td>
           <td><%= @book.opinion%></td>
           <td><a class="btn btn-sm btn-success edit_book_30201" href="/books/<%= @book.id%>/edit">Edit</a></td>
-          <td><a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_30201" rel="nofollow" data-method="delete" href="/books/30201">Destroy</a></td>
+          <td><%= link_to "Destroy", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？"%></td>
+          <!--<td><a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_30201" rel="nofollow" data-method="delete" href="/books/30201">Destroy</a></td>-->
         </tr>
       </tbody></table>
     </div>

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
-  resources :books, only: [:new, :create, :index, :edit, :show, :destroy]
+  delete "books/:id" => "books#destroy", as: "destroy_book"
+  resources :books, only: [:new, :create, :index, :edit, :update, :show]
   resources :post_images, only: [:new, :create, :index, :show, :destroy]
   resources :users, only: [:show,:edit,:index]
   resources :homes
