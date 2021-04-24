@@ -3,7 +3,7 @@
 </head>
 
 <main>
-        <p id="notice"></p>
+        <%= flash[:notice] %>
         <div class="container px-5 px-sm-0">
 
   <div class="row">
@@ -30,7 +30,7 @@
 </table>
 
 <div class="row">
-  <a class="btn btn-outline-secondary btn-block fas fa-user-cog" href= "/users/<%= @user.id %>/edit" ></a>
+  <a class="btn btn-outline-secondary btn-block fas fa-user-cog" href= "users/<%= @user %>/edit" ></a>
 </div>
 
 <!--      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="lwqQwXcQfdaT0Gq5XMto+R6XLorraUZxnfYaBdOgJx7fH3ovjd86iHZq3gQLxzp/ufR5DQC62uYC8Mt/ng2Ifw==">-->
@@ -54,6 +54,8 @@
     <%= message %>
   <% end %>
 <% end %>
+
+
 
   <%= form_with model: @book, url:"/books", local:true do|f|%>
     <div class ="field">

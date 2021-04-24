@@ -5,8 +5,9 @@ class BooksController < ApplicationController
   def create
         # １. データを新規登録するためのインスタンス作成
     @book = Book.new(book_params)
-    book.user_id = current_user.id
+    @book.user_id = current_user.id
     if @book.save
+    flash[:notice] = "You have created book successfully."
     redirect_to books_path
     else
     render :index
@@ -16,7 +17,7 @@ class BooksController < ApplicationController
   def index
     @book = Book.new
     @books = Book.all
-    @user = User.find(params[:id])
+    @user = current_user.id
   end
 
   def show
@@ -35,8 +36,10 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    @book.update(book_params)
+    if @book.update(book_params)
+    flash[:notice] = "You have updated book successfully."
     redirect_to book_path(@book.id)
+    end
   end
 
   def destroy

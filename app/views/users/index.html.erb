@@ -9,7 +9,7 @@
     <tr></tr>
   <tr>
 	  <th>name</th>
-	  <th>ここデータベースから引っ張りたい</th>
+	  <th><%= @user_name %></th>
   </tr>
   <tr>
 	  <th>introduction</th>
@@ -19,7 +19,7 @@
 </table>
 
 <div class="row">
-  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_36394" href="/users/36394/edit"></a>
+  <a class="btn btn-outline-secondary btn-block fas fa-user-cog" href="users/<%= @user %>/edit"></a>
 </div>
       <h2 class="mt-3">New book</h2>
       <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="wTGfBxDgOv0pN/Rx0NKt2JggeJo5qJ95A414vjVgpriJJHXp6i99o8yNQMyH3v9eP0MvHdJ7A+6ci6nEeM0J2Q==">

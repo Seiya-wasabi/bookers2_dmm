@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   delete "books/:id" => "books#destroy", as: "destroy_book"
   resources :books, only: [:new, :create, :index, :edit, :update, :show]
   resources :post_images, only: [:new, :create, :index, :show, :destroy]
-  resources :users, only: [:show,:edit,:index,]
+  resources :users, only: [:show,:edit,:index,:update]
   resources :homes
   get "/home/about" => "homes#about"
   post "/books" => "books#create"
