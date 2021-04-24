@@ -4,12 +4,13 @@ class BooksController < ApplicationController
 
   def create
         # １. データを新規登録するためのインスタンス作成
-    book = Book.new(book_params)
-    # ２. データをデータベースに保存するためのsaveメソッド実行
+    @book = Book.new(book_params)
     book.user_id = current_user.id
-    book.save
-    # ３. トップ画面へリダイレクト
+    if @book.save
     redirect_to books_path
+    else
+    render :index
+    end
   end
 
   def index
@@ -25,6 +26,11 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    if @book.user == current_user
+      render "edit"
+    else
+      redirect_to books_path
+    end
   end
 
   def update
@@ -40,7 +46,7 @@ class BooksController < ApplicationController
   end
 
     private
-  
+
   def book_params
     params.require(:book).permit(:title, :opinion)
   end
