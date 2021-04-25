@@ -3,7 +3,6 @@ class BooksController < ApplicationController
   end
 
   def create
-        # １. データを新規登録するためのインスタンス作成
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     if @book.save
@@ -51,6 +50,6 @@ class BooksController < ApplicationController
     private
 
   def book_params
-    params.require(:book).permit(:title, :opinion)
+    params.require(:book).permit(:title, :body)
   end
 end
