@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
+
+  post "/users/sign_in" => "books#show"
+
   devise_for :users
   delete "books/:id" => "books#destroy", as: "destroy_book"
   resources :books, only: [:new, :create, :index, :edit, :update, :show]
-  resources :post_images, only: [:new, :create, :index, :show, :destroy]
+  resources :sessions, only: [:new]
   resources :users, only: [:show,:edit,:index,:update]
   resources :homes, only: [:top, :about]
   get "/home/about" => "homes#about"

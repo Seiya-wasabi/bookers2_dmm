@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :books, dependent: :destroy
-  has_many :post_images, dependent: :destroy
+  # has_many :post_images, dependent: :destroy
   attachment :image
   attachment :profile_image
 
