@@ -4,7 +4,7 @@
    <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg"><table class="table">
+      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
   <table class="table">
   <tbody>
     <tr></tr>
@@ -20,9 +20,11 @@
 </table>
 
 <div class="row">
+  <div class = "btn-user">
 <%= link_to edit_user_path(current_user.id), :method => :get do %>
   <i class="btn btn-outline-secondary btn-block fas fa-user-cog"></i>
 <% end %>
+  </div>
 </div>
 <!--<div class="row">-->
 <!--  <a class="btn btn-outline-secondary btn-block fas fa-user-cog" href="users/>/edit"></a>-->
@@ -47,7 +49,7 @@
     <%= f.text_area :body %>
     </div>
     <div class ="action">
-      <%= f.submit 'Create Book' %>
+      <%= f.submit 'Create Book', class: "btn btn-success" %>
     </div>
   <% end %>
     </div>

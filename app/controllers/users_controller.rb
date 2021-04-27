@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @book = Book.new
+    @user_i = current_user
     @user = current_user.id
     @user_name =  current_user.name
     @user_intro = current_user.introduction

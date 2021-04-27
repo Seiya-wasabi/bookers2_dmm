@@ -4,8 +4,8 @@
   <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
-
+      <!--<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">-->
+      <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
       <table class="table">
   <tbody>
     <tr></tr>
@@ -17,11 +17,19 @@
 	  <th>introduction</th>
 	  <th><%= @user.introduction %></th>
   </tr>
-</tbody></table>
+</tbody>
+</table>
 
 <div class="row">
-  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_36418" href="/users/<%= @user.id %>/edit"></a>
+  <div class = "btn-user">
+<%= link_to edit_user_path(@user.id), :method => :get do %>
+  <i class="btn btn-outline-secondary btn-block fas fa-user-cog"></i>
+<% end %>
+  </div>
 </div>
+<!--<div class="row">-->
+<!--  <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_36418" href="/users//edit"></a>-->
+<!--</div>-->
 <!--      <h2 class="mt-3">New book</h2>-->
 <!--      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="/6VG/ZsYZh9moCCjb7s7Lzs58D3eWzx76Cs+APt7PhG3sKwTYdchQYMalB44t2mpnFqnujWIoOx3Le96ttaRcA==">-->
 <!--  <div class="form-group">-->
@@ -56,7 +64,7 @@
     <%= f.text_area :body %>
     </div>
     <div class ="action">
-      <%= f.submit 'Create Book' %>
+      <%= f.submit 'Create Book', class: "btn btn-success" %>
     </div>
   <% end %>
     </div>

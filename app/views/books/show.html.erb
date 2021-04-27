@@ -4,8 +4,9 @@
   <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg"><table class="table">
-  <tbody><tr></tr>
+      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
+  <table class = "table ">
+  <tbody>
   <tr>
 	  <th>name</th>
 	  <th><%= @user.name %></th>
@@ -14,12 +15,15 @@
 	  <th>introduction</th>
 	  <th><%= @user.introduction %></th>
   </tr>
-</tbody></table>
+  </tbody>
+  </table>    
 
 <div class="row">
+  <div class = "btn-user">
 <%= link_to edit_user_path(@user.id), :method => :get do %>
   <i class="btn btn-outline-secondary btn-block fas fa-user-cog"></i>
 <% end %>
+  </div>
 </div>
       <h2 class="mt-3">New book</h2>
       <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="pMW6Ca5OeVw4DPy5UUrMOhM8bxVlLF2HEKkoS0dBTSXs0FDnVIE+At22SAQGRp68tF84ko7/wRCPr/kxCuziRA==">
