@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
 
-  post "/users/sign_in" => "books#show"
-
   devise_for :users
   delete "books/:id" => "books#destroy", as: "destroy_book"
   resources :books, only: [:new, :create, :index, :edit, :update, :show]

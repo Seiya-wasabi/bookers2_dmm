@@ -4,7 +4,12 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
   		<h1>Editing Book</h1>
-
+  		<% if @book.errors.any? %>
+      <%= @book.errors.count %>error prohibited this obj from being saved:
+        <% @book.errors.full_messages.each do |message| %>
+            <%= message %>
+        <% end %>
+      <% end %>
  <!-- <form action="/books/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="+hMfSQVCO1rFRxYhDomIbCdq8qfgr8mFJjNSu3YkWD/rIaJ5wmlo59PKiy1dCFOsAIA6nQw9iBm0vleIVQWoeA==">-->
  <!--   <div class="form-group">-->
  <!--     <label for="book_title">Title</label>-->
@@ -18,17 +23,17 @@
  <!--      <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="/books/">-->
  <!--    </div>-->
  <!--</form>-->
- 
+
  <%= form_with model:@book, local:true do |f| %>
   <label for="inputTitle">Title</label>
   <%= f.text_field :title, autofocus: true, id:"inputTitle" %>
   <label for="inputBody">Opinion</label>
   <%= f.text_field :body, autofocus: true, id:"inputBody" %>
-  <%= f.submit "Editting Book" %>
+  <%= f.submit "Update Book", class: "btn btn-success" %>
 <% end %>
- 
- 
-  		<%= link_to "Show", books_path %> |
+
+
+  		<%= link_to "Show", book_path(@book) %> |
   		<a class="back" href="/books">Back</a>
     </div>
   </div>
