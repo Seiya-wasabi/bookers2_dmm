@@ -4,7 +4,8 @@
    <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
+      <!--<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">-->
+      <%= attachment_image_tag @user_i, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
   <table class="table">
   <tbody>
     <tr></tr>
@@ -66,9 +67,13 @@
    <tbody>
     <% @users.each do|b| %>
       <tr>
-        <td><a href="/users/<%= b.id %>">
-          <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">
-            </a></td>
+        <!--<td><a href="/users/<>-->
+          <!--<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg">-->
+            <td><%= link_to user_path(b.id) do %>
+            <%= attachment_image_tag b, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+            <% end %>
+            </td>
+            <!--</a></td>-->
         <td><%= b.name %></td>
         <td><%= link_to "Show", user_path(b.id) %></td>
       </tr>
