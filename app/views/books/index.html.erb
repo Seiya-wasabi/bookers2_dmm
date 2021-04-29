@@ -98,8 +98,8 @@
             <%= attachment_image_tag b.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
             <% end %>
             </td>
-        <td><a href="/books/<%= b.id %>"><%= b.title %></a></td>
-        <td><a href="/books/<%= b.id %>"><%= b.title %></a></td>
+        <!--<td><a href="/a></td>-->
+        <td><%=link_to b.title, book_path(b.id)%></td>
         <td><%= b.body %></td>
       </tr>
     <% end %>
